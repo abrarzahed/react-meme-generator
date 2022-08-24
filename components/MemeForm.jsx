@@ -1,4 +1,17 @@
+import { useState } from "react";
+import memesData from "../memesData";
+
 export default function MemeForm() {
+  const memesArray = memesData.data.memes;
+  const [memeImage, setMemeImage] = useState("");
+
+  const getMemeImage = function (e) {
+    e.preventDefault();
+    const randomMeme = Math.floor(Math.random() * memesArray.length);
+    setMemeImage(memesArray[randomMeme].url);
+  };
+
+  //   console.log(data);
   return (
     <main className="app-content">
       <form>
@@ -7,11 +20,17 @@ export default function MemeForm() {
           <input type="text" id="punchline" placeholder="Punchline" />
         </div>
         <div className="actions">
-          <input type="submit" value="Get a new meme image  🖼" />
+          <input
+            onClick={getMemeImage}
+            type="submit"
+            value="Get a new meme image  🖼"
+          />
         </div>
       </form>
 
-      <div className="meme"></div>
+      <div className="meme">
+        <img src={memeImage} alt="" />
+      </div>
     </main>
   );
 }
