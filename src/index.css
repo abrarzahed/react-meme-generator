@@ -1,0 +1,109 @@
+:root {
+  --header-gradient: linear-gradient(90deg, #672280 1.18%, #a626d3 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+  color: #2f2f2f;
+}
+body {
+  background: rgb(230, 218, 156);
+  padding: 3%;
+}
+a {
+  text-decoration: none;
+}
+.app {
+  max-width: 800px;
+  background: #fff;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+header {
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  background: var(--header-gradient);
+  color: #fff;
+  height: 80px;
+  justify-content: space-between;
+}
+.header--left {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  max-width: 70px;
+}
+
+.app-name {
+  color: #f5f5f5;
+  font-family: "Rubik Maze", cursive;
+  font-size: 2.5rem;
+  margin-left: -10px;
+  text-shadow: -2px 2px 5px rgb(0, 0, 0);
+}
+
+.header-link {
+  background: #f5f5f5;
+  color: #2f2f2f;
+  font-weight: 700;
+  padding: 0.8rem 1.2rem;
+  border-radius: 100px;
+  font-size: 14px;
+}
+
+.app-content {
+  padding: 1rem 1.5rem;
+}
+
+/* meme form */
+form {
+  margin-top: 2rem;
+}
+.inputs {
+  display: flex;
+  gap: 1rem;
+}
+input {
+  flex: 1;
+}
+input[type="text"] {
+  padding: 1.1rem 1.2rem;
+  border: 2px solid #e6da9c;
+  border-radius: 8px;
+}
+input[type="text"]:focus {
+  border: none;
+  outline: 2px solid #a626d3;
+}
+input[type="submit"] {
+  margin-top: 1rem;
+  background: var(--header-gradient);
+  border: none;
+  color: #fff;
+  width: 100%;
+  font-family: "Rubik Maze", cursive;
+  padding: 1rem;
+  font-size: 1.3rem;
+  border-radius: 8px;
+  height: 50px;
+  line-height: 0;
+  cursor: pointer;
+  opacity: 0.9;
+  transition: 0.03s;
+  box-shadow: 0.4px 5px 0px 1px #2f2f2f;
+}
+input[type="submit"]:hover {
+  opacity: 1;
+}
+input[type="submit"]:active {
+  transform: scale(0.99);
+  box-shadow: inset -5px 5px 10px rgba(47, 47, 47, 0.3);
+}
